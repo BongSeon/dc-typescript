@@ -31,21 +31,24 @@
 
   // JavaScript ✨ => TypeScript
   // Optional parameter
+  // lastName은 옵셔널! 때에 따라서 없을 수도 있다고 명시
   function printName(firstName: string, lastName?: string) {
     console.log(firstName);
     console.log(lastName); // undefined
   }
-  printName('Steve', 'Jobs');
-  printName('Ellie');
-  printName('Anna');
+  printName("Steve", "Jobs");
+  printName("Ellie");
+  printName("Anna");
 
   // Default parameter
-  function printMessage(message: string = 'default message') {
+  function printMessage(message: string = "default message") {
     console.log(message);
   }
   printMessage();
 
   // Rest parameter
+  // 여러 인자들을 간편하게 배열형태로 받아오는 방법
+  // → 다만타입이 동일해야 함!
   function addNumbers(...numbers: number[]): number {
     return numbers.reduce((a, b) => a + b);
   }
